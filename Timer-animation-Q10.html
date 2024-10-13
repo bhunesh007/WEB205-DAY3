@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Clock Animation</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F66B3D;
+}
+
+.clock-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #F66B3D, #FFAF7A);
+    border-radius: 15px;
+}
+
+.clock {
+    font-size: 48px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.digit-container {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    width: 60px;
+}
+
+.digit {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.second .number {
+    display: block;
+    height: 60px;
+    text-align: center;
+}
+
+.second {
+    animation: scrollNumbers 60s steps(60) infinite;
+}
+
+@keyframes scrollNumbers {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3600px); /* 60 numbers, each 60px tall */ }
+}
+
+/* Styling colons */
+.colon {
+    margin: 0 10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock">
+            <div class="digit-container">
+                <div class="digit hour">12</div>
+            </div>
+            <span class="colon">:</span>
+            <div class="digit-container">
+                <div class="digit minute">15</div>
+            </div>
+            <span class="colon">:</span>
+            <div class="digit-container">
+                <div class="digit second">
+                    <div class="number">00</div>
+                    <div class="number">01</div>
+                    <div class="number">02</div>
+                    <div class="number">03</div>
+                    <div class="number">04</div>
+                    <div class="number">05</div>
+                    <div class="number">06</div>
+                    <div class="number">07</div>
+                    <div class="number">08</div>
+                    <div class="number">09</div>
+                    <div class="number">10</div>
+                    <div class="number">11</div>
+                    <div class="number">12</div>
+                    <div class="number">13</div>
+                    <div class="number">14</div>
+                    <div class="number">15</div>
+                    <div class="number">16</div>
+                    <div class="number">17</div>
+                    <div class="number">18</div>
+                    <div class="number">19</div>
+                    <div class="number">20</div>
+                    <div class="number">21</div>
+                    <div class="number">22</div>
+                    <div class="number">23</div>
+                    <div class="number">24</div>
+                    <div class="number">25</div>
+                    <div class="number">26</div>
+                    <div class="number">27</div>
+                    <div class="number">28</div>
+                    <div class="number">29</div>
+                    <div class="number">30</div>
+                    <div class="number">31</div>
+                    <div class="number">32</div>
+                    <div class="number">33</div>
+                    <div class="number">34</div>
+                    <div class="number">35</div>
+                    <div class="number">36</div>
+                    <div class="number">37</div>
+                    <div class="number">38</div>
+                    <div class="number">39</div>
+                    <div class="number">40</div>
+                    <div class="number">41</div>
+                    <div class="number">42</div>
+                    <div class="number">43</div>
+                    <div class="number">44</div>
+                    <div class="number">45</div>
+                    <div class="number">46</div>
+                    <div class="number">47</div>
+                    <div class="number">48</div>
+                    <div class="number">49</div>
+                    <div class="number">50</div>
+                    <div class="number">51</div>
+                    <div class="number">52</div>
+                    <div class="number">53</div>
+                    <div class="number">54</div>
+                    <div class="number">55</div>
+                    <div class="number">56</div>
+                    <div class="number">57</div>
+                    <div class="number">58</div>
+                    <div class="number">59</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
